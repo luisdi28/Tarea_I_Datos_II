@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -7,26 +8,46 @@ struct Nodo{
     Nodo *siguiente;
 };
 
+void menu();
 void insertarLista(Nodo *&, int);
+void mostrarLista(Nodo *);
+
+Nodo *lista = NULL;
 
 int main() {
 
-    Nodo *lista = NULL;
-    int dato;
-
-    cout<<"Digite un número: ";
-    cin>>dato;
-    insertarLista(lista, dato);
-
-    cout<<"Digite un número: ";
-    cin>>dato;
-    insertarLista(lista, dato);
-
-    cout<<"Digite un número: ";
-    cin>>dato;
-    insertarLista(lista, dato);
-
+    menu();
     return 0;
+}
+
+void menu(){
+    int opcion, dato;
+
+    do{
+        cout<<"\t.:Menu:.\n";
+        cout<<"1. Insertar elementos en la lista\n";
+        cout<<"2. Mostar los elementos de la lista\n";
+        cout<<"3. Salir\n";
+        cout<<"Opción: ";
+        cin>>opcion;
+
+        switch(opcion){
+            case 1:
+                cout<<"\nDigite un número: ";
+                cin>>dato;
+                insertarLista(lista, dato);
+                cout<<"\n";
+                //std::system("pause");
+                break;
+            case 2:
+                mostrarLista(lista);
+                cout<<"\n";
+                //std::system("pause");
+                break;
+        }
+        //std::system("cls");
+    }while(opcion != 3);
+
 }
 
 void insertarLista(Nodo *&lista, int n) {
@@ -50,4 +71,20 @@ void insertarLista(Nodo *&lista, int n) {
     nuevo_nodo->siguiente = aux1;
 
     cout<<"\tElemento "<<n<<" insertado a la lista correctamente\n";
+}
+
+void mostrarLista(Nodo *lista){
+    Nodo *actual = new Nodo();
+    actual = lista;
+
+    while (actual != NULL){
+        cout<<actual->dato<<" -> ";
+        actual = actual->siguiente;
+    }
+}
+
+void pause()
+{
+    std::cout<<"Press any key to continue";
+    std::getchar();
 }
