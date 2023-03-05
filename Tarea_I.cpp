@@ -37,3 +37,22 @@ public:
         std::cout << std::endl;
     }
 };
+
+class Collector {
+public:
+    std::vector<Node*> recycled;
+
+    void* allocate(size_t size) {
+        if (recycled.empty()) {
+            return ::operator new(size);
+        } else {
+            void* ptr = recycled.back();
+            recycled.pop_back();
+            return ptr;
+        }
+    }
+
+    void deallocate(void* ptr) {
+        recycled.push_back(static_cast<Node*>(ptr));
+    }
+};
