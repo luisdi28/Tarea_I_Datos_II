@@ -1,4 +1,4 @@
-/home/luis/Descargas/CLion-2022.3.2/clion-2022.3.2/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/luis/Descargas/CLion-2022.3.2/clion-2022.3.2/bin/ninja/linux/x64/ninja -G Ninja -S /home/luis/Documentos/GitHub/Tarea_I_Datos_II -B /home/luis/Documentos/GitHub/Tarea_I_Datos_II/cmake-build-debug
+/opt/CLion/clion-2022.3.2/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/andres/CLionProjects/Tarea_I_Datos_II -B /home/andres/CLionProjects/Tarea_I_Datos_II/cmake-build-debug
 -- The C compiler identification is GNU 11.3.0
 -- The CXX compiler identification is GNU 11.3.0
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/luis/Documentos/GitHub/Tarea_I_Datos_II/cmake-build-debug
+-- Build files have been written to: /home/andres/CLionProjects/Tarea_I_Datos_II/cmake-build-debug

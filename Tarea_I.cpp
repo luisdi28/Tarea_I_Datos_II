@@ -78,4 +78,20 @@ int main() {
     l.insert(3);
     std::cout << "List: ";
     l.print();
+
+    // liberar un Node y agregarlo al Collector
+    Node* to_delete = l.head->next;
+    l.head->next = to_delete->next;
+    to_delete->next = nullptr;
+    delete to_delete;
+
+    std::cout << "List despues de eliminar un Node: ";
+    l.print();
+
+    // imprimir el estado actual del Collector
+    std::cout << "Collector: ";
+    for (Node* ptr : collector.recycled) {
+        std::cout << ptr << " ";
+    }
+    std::cout << std::endl;
 }
