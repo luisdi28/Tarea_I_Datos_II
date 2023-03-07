@@ -56,3 +56,16 @@ public:
         recycled.push_back(static_cast<Node*>(ptr));
     }
 };
+
+// instancia global del Collector
+Collector collector;
+
+
+// sobrecarga de new y delete
+void* Node::operator new(size_t size) {
+    return collector.allocate(size);
+}
+
+void Node::operator delete(void* ptr) {
+    collector.deallocate(ptr);
+}
