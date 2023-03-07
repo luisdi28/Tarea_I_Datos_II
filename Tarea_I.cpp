@@ -69,3 +69,13 @@ void* Node::operator new(size_t size) {
 void Node::operator delete(void* ptr) {
     collector.deallocate(ptr);
 }
+
+// ejemplo de uso
+int main() {
+    List l;
+    l.insert(1);
+    l.insert(2);
+    l.insert(3);
+    std::cout << "List: ";
+    l.print();
+}
