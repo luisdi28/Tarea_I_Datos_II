@@ -94,4 +94,18 @@ int main() {
         std::cout << ptr << " ";
     }
     std::cout << std::endl;
+
+    // Crear un nuevo Node, reusando espacio del Collector
+    l.insert(4);
+    l.print();
+
+    // imprimir el estado actual del Collector
+    std::cout << "Collector despues de crear un nuevo Node: ";
+    for (Node* ptr : collector.recycled) {
+        std::cout << ptr << " ";
+    }
+    std::cout << std::endl;
+
+    l.insert(7);
+    l.print();
 }
