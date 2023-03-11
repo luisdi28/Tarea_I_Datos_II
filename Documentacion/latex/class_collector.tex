@@ -1,0 +1,59 @@
+\hypertarget{class_collector}{}\doxysection{Collector Class Reference}
+\label{class_collector}\index{Collector@{Collector}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{class_collector_a4250288a1ee8887b67f3afe47e45dae1}{allocate}} (size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{class_collector_a017bcc602a202895a7cd2ffca3d1b757}{deallocate}} (void $\ast$ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}} $\ast$ $>$ \mbox{\hyperlink{class_collector_ab31fd716482b81c1a0cb264579c83c2f}{recycled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase encargada de reciclar la memoria liberada en \mbox{\hyperlink{class_list}{List}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_collector_a4250288a1ee8887b67f3afe47e45dae1}\label{class_collector_a4250288a1ee8887b67f3afe47e45dae1}} 
+\index{Collector@{Collector}!allocate@{allocate}}
+\index{allocate@{allocate}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily void $\ast$ Collector\+::allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Asigna memoria dinÃ¡mica para el CPU 
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_collector_a017bcc602a202895a7cd2ffca3d1b757}\label{class_collector_a017bcc602a202895a7cd2ffca3d1b757}} 
+\index{Collector@{Collector}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{deallocate()}{deallocate()}}
+{\footnotesize\ttfamily void Collector\+::deallocate (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Desasigna memoria dinÃ¡mica para el CPU 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_collector_ab31fd716482b81c1a0cb264579c83c2f}\label{class_collector_ab31fd716482b81c1a0cb264579c83c2f}} 
+\index{Collector@{Collector}!recycled@{recycled}}
+\index{recycled@{recycled}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{recycled}{recycled}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_node}{Node}}$\ast$$>$ Collector\+::recycled}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_tarea___i_8cpp}{Tarea\+\_\+\+I.\+cpp}}\end{DoxyCompactItemize}
